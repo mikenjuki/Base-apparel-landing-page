@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> --> 
-  <title>Base Apparel coming soon page</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <title>Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="/images/logo.svg" alt="company logo" />
+      </header>
 
-  We're coming soon
+      <div class="hero"></div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+      <main>
+        <div class="copy-heading">
+          <h1><span class="copy-heading_highlight">we're</span> coming soon</h1>
+        </div>
+        <div class="body-copy">
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div>
+        <div class="form-container">
+          <form>
+            <input
+              type="email"
+              class="email-box"
+              aria-labelledby="email address"
+              placeholder="Email Address"
+            />
+            <button type="button">
+              <img src="/images/icon-arrow.svg" alt="submit right arrow icon" />
+            </button>
+            <div class="email-error-icon hidden">
+              <img
+                src="/images/icon-error.svg"
+                alt="Invalid email error icon"
+              />
+            </div>
+          </form>
+          <div class="email-error-message hidden">
+            <p>Please provide a valid email</p>
+          </div>
+        </div>
+      </main>
 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Coded by <a href="https://twitter.com/mikenjuki">Michael Njuki</a>.
-    </p>
-  </footer>
-</body>
+      <footer>
+        <p class="attribution">
+          Coded by <a href="https://twitter.com/mikenjuki">Michael Njuki</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>

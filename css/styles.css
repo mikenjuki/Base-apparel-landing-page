@@ -1,15 +1,175 @@
 @import url("reset.css");
-
-/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
-
-/* Global styles */
-:root {
-  --max-width: 1440px;
-  --mobile-width: 375px;
-
-  /* Colors */
-  --unsaturated-red: hsl(0, 36%, 70%);
-  --soft-red: hsl(0, 93%, 68%);
-  --dark-grayish-red: hsl(0, 6%, 24%);
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-size: 60% 100%;
 }
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "header hero" "main   hero" "main   hero" "footer hero";
+}
+.wrapper header {
+  grid-area: header;
+  display: grid;
+  align-items: center;
+  height: 15rem;
+  padding: 0 15rem;
+}
+.wrapper .hero {
+  grid-area: hero;
+  background-image: url(/images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper main {
+  grid-area: main;
+  padding: 0 15rem;
+  max-width: 100rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(0deg, 6%, 24%);
+}
+.wrapper main .copy-heading h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  line-height: 1;
+}
+.wrapper main .copy-heading h1 .copy-heading_highlight {
+  font-weight: 300;
+  color: hsl(0deg, 36%, 70%);
+}
+.wrapper main .body-copy {
+  padding: 2rem 0;
+}
+.wrapper main .body-copy p {
+  color: hsl(0deg, 36%, 70%);
+  line-height: 1.5;
+}
+.wrapper main .form-container form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wrapper main .form-container form input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  border-radius: 2rem;
+  font-weight: 300;
+}
+.wrapper main .form-container form input::placeholder {
+  color: #efdbdd;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.wrapper main .form-container form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 3.7rem;
+  border: none;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  box-shadow: 0px 10px 2.5rem 2px hsl(0deg, 36%, 70%);
+  transition: box-shadow 0.5s;
+  position: absolute;
+  right: 0;
+}
+.wrapper main .form-container form button:hover {
+  box-shadow: 0px 5px 10px 1px hsl(0deg, 36%, 70%);
+  cursor: pointer;
+  background: hsl(0deg, 100%, 91%);
+}
+.wrapper main .form-container form .email-error-icon {
+  position: absolute;
+  right: 8.6rem;
+}
+.wrapper main .form-container form .email-error-border {
+  border: 1px solid hsl(0deg, 93%, 68%);
+}
+.wrapper main .form-container .email-error-message p {
+  padding: 1rem 0 0 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(0deg, 6%, 24%);
+  color: hsl(0deg, 93%, 68%);
+}
+.wrapper main .form-container .hidden {
+  visibility: hidden;
+}
+.wrapper footer {
+  grid-area: footer;
+  padding: 0 15rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.wrapper footer a {
+  color: hsl(0deg, 36%, 70%);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background: linear-gradient(135deg, hsl(0deg, 100%, 98%), hsl(0deg, 0%, 100%));
+  }
+  .wrapper {
+    grid-template-columns: 2fr;
+    grid-template-rows: 5rem 30rem auto auto;
+    grid-template-areas: "header" "hero" "main" "footer";
+  }
+  .wrapper header {
+    grid-area: header;
+    height: 5rem;
+    padding: 0 0 0 3.5rem;
+  }
+  .wrapper .hero {
+    grid-area: hero;
+    background-image: url(/images/hero-mobile.jpg);
+  }
+  .wrapper main {
+    grid-area: main;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, hsl(0deg, 100%, 98%), hsl(0deg, 0%, 100%));
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(0deg, 6%, 24%);
+  }
+  .wrapper main .copy-heading {
+    padding: 6rem 2rem 3rem 2rem;
+  }
+  .wrapper main .copy-heading h1 {
+    font-size: 3rem;
+  }
+  .wrapper main .body-copy {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .wrapper main .form-container {
+    padding: 0 2rem 0 2rem;
+  }
+  .wrapper main .form-container form input {
+    padding: 0.8rem;
+  }
+  .wrapper main .form-container form button {
+    width: 5rem;
+    height: 3.1rem;
+  }
+  .wrapper footer {
+    margin: 0;
+    padding: 2rem 4rem;
+    grid-area: footer;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
