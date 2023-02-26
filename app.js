@@ -11,7 +11,7 @@ function submitForm() {
     errorMessage.classList.add("hidden");
   } else {
     // The email is not valid, so display an error message
-    errorIcon.classList.remove("hidden");
+    errorIcon.classList.remove("hidden"); 
     errorMessage.classList.remove("hidden");
     userInput.classList.add("email-error-border");
   }
