@@ -1,3 +1,4 @@
+// Grabbing DOM Elements
 const submitButton = document.querySelector("button");
 const errorIcon = document.querySelector(".email-error-icon");
 const errorMessage = document.querySelector(".email-error-message");
@@ -6,6 +7,8 @@ function submitForm() {
   const userInput = document.querySelector("input.email-box").value;
   if (isValidEmail(userInput)) {
     alert("Thank you for signing up!");
+    errorIcon.classList.add("hidden");
+    errorMessage.classList.add("hidden");
   } else {
     // The email is not valid, so display an error message
     errorIcon.classList.remove("hidden");
@@ -24,19 +27,20 @@ function isValidEmail(userInput) {
 submitButton.addEventListener("hover", () => {});
 submitButton.addEventListener("click", submitForm);
 
+// GSAP Animation
 window.onload = function () {
   gsap.from(".hero", {
     duration: 2.5,
-    x: 200,
+    y: -300,
     opacity: 0,
     ease: "expo.out",
   });
 
   gsap.from(".copy-heading > h1", {
     duration: 3.5,
-    y: 100,
+    y: 200,
     opacity: 0,
+    delay: 0.9,
     ease: "expo.out",
-    stagger: 0.2,
   });
 };

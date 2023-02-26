@@ -115,6 +115,7 @@ body {
 .wrapper footer a {
   color: hsl(0deg, 36%, 70%);
   cursor: pointer;
+  text-decoration: none;
 }
 
 @media (max-width: 1024px) {

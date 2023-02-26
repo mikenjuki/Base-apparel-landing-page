@@ -63,7 +63,7 @@ body {
         font-size: 4rem;
         letter-spacing: 1rem;
         line-height: 1;
-      
+
         .copy-heading_highlight {
           font-weight: 300;
           color: $desaturated-red;
@@ -153,6 +153,7 @@ body {
     a {
       color: $desaturated-red;
       cursor: pointer;
+      text-decoration: none;
     }
   }
 }
