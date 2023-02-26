@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/mikenjuki/Base-apparel-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://mikenjuki.github.io/Base-apparel-landing-page/)
 
 ## My process
 
